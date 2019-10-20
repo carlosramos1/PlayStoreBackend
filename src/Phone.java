@@ -6,7 +6,6 @@ public class Phone {
 
     public Phone() {
         installedApps = new HashMap<>();
-        installApp(new PlayStoreService());
     }
 
     public void installApp(App app) {

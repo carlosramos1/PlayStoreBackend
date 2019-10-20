@@ -1,12 +1,12 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ActionShowDisplayPlayStore implements ActionListener {
+public class ActionShowDisplayApp implements ActionListener {
     private PhoneScreen phoneScreen;
     private App playStore;
 
-    public ActionShowDisplayPlayStore(PhoneScreen pantalla, App playStore) {
-        this.phoneScreen = pantalla;
+    public ActionShowDisplayApp(PhoneScreen phoneScreen, App playStore) {
+        this.phoneScreen = phoneScreen;
         this.playStore = playStore;
     }
 
@@ -14,6 +14,5 @@ public class ActionShowDisplayPlayStore implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         phoneScreen.showPanelApp(playStore.getName());
         phoneScreen.hidePanelMain();
-        System.out.println("mostrando play store");
     }
 }

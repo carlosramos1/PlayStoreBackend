@@ -1,26 +1,16 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class PlayStoreService implements App {
+public class PlayStore implements App {
     private Map<String, App> apps;
 
-    public PlayStoreService() {
+    public PlayStore() {
         apps = new HashMap<>();
 
         App youtube = new Youtube();
         apps.put(youtube.getName(), new Youtube());
         App facebook = new Facebook();
         apps.put(facebook.getName(), facebook);
-    }
-
-    public boolean ok(){
-        System.out.println("play Store OK");
-        return true;
-    }
-
-    public boolean cerrarApp(){
-        System.out.println("Play Store Close");
-        return true;
     }
 
     public Map<String, App> getApps() {

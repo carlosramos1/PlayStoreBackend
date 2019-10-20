@@ -9,27 +9,37 @@ public class PhoneScreen extends JFrame {
     private JMenuBar barraMenus;
     private JMenu menuFile;
     private JMenuItem menuItemClose;
+    private JButton btnCloseApp;
 
     private PanelPrincipal panelMain;
     private Map<String, JPanel> appPanels;
     private Phone phone;
+    private String panelActual;
 
     public PhoneScreen(Phone celular) {
         this.phone = celular;
         this.appPanels = new HashMap<>();
         initGUI();
-        Map<String, App> installedApps = phone.getInstalledApps();
-        installedApps.forEach((appName, app) -> {
+
+        phone.getInstalledApps().forEach((appName, app) -> {
             panelMain.addAppButton(appName);
+            panelMain.getAppButton(appName).addActionListener(new ActionShowDisplayApp(this, app));
             switch (appName){
                 case "Play Store":
-                    PanelPlayStore panelPlayStore = new PanelPlayStore((PlayStoreService) app);
-                    panelPlayStore.getButtonClose().addActionListener(new ActionClosePlayStore(this, app));
-                    appPanels.put(appName, panelPlayStore);
-                    panelMain.getAppButton(appName).addActionListener(new ActionShowDisplayPlayStore(this, app));
+                    appPanels.put(appName, new PanelPlayStore((PlayStore) app));
                     break;
+                case "Youtube":
+                    appPanels.put(appName, new PanelYoutube((Youtube) app));
+                    break;
+                case "Facebook":
+                    appPanels.put(appName, new PanelFacebook((Facebook) app));
             }
         });
+
+        btnCloseApp = new JButton("Cerrar App");
+        btnCloseApp.setAlignmentX(Component.CENTER_ALIGNMENT);
+        btnCloseApp.addActionListener(new ActionCloseApp(this));
+        add(btnCloseApp, BorderLayout.PAGE_END);
     }
 
     private void initGUI() {
@@ -42,7 +52,6 @@ public class PhoneScreen extends JFrame {
         panelMain = new PanelPrincipal();
         panelMain.setVisible(true);
         this.add(panelMain, BorderLayout.CENTER);
-
     }
 
     private void addMenuBar() {
@@ -55,22 +64,31 @@ public class PhoneScreen extends JFrame {
         this.setJMenuBar(barraMenus);
     }
 
-    public void hidePanelMain() {
-        panelMain.setVisible(false);
-    }
-
     public void showPanelMain() {
         add(panelMain, BorderLayout.CENTER);
         panelMain.setVisible(true);
     }
 
+    public void hidePanelMain() {
+        remove(panelMain);
+        revalidate();
+        repaint();
+    }
+
     public void showPanelApp(String nameApp) {
         add(appPanels.get(nameApp), BorderLayout.CENTER);
         appPanels.get(nameApp).setVisible(true);
+        panelActual = nameApp;
     }
 
     public void hidePanelApp(String nameApp) {
-        appPanels.get(nameApp).setVisible(false);
+        remove(appPanels.get(nameApp));
+        revalidate();
+        repaint();
+    }
+
+    public String getPanelActual() {
+        return panelActual;
     }
 
 }
