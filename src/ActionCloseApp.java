@@ -10,7 +10,8 @@ public class ActionCloseApp implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        phoneScreen.showPanelMain();
         phoneScreen.hidePanelApp(phoneScreen.getPanelActual());
+        phoneScreen.showPanelMain();
+        System.out.println("cerrando "+phoneScreen.getPanelActual());
     }
 }

@@ -21,6 +21,16 @@ public class PhoneScreen extends JFrame {
         this.appPanels = new HashMap<>();
         initGUI();
 
+        actualizarBotonesAppInstalados();
+
+        btnCloseApp = new JButton("Cerrar App");
+        btnCloseApp.setAlignmentX(Component.CENTER_ALIGNMENT);
+        btnCloseApp.addActionListener(new ActionCloseApp(this));
+        add(btnCloseApp, BorderLayout.PAGE_END);
+    }
+
+    private void actualizarBotonesAppInstalados() {
+        panelMain.removeAll();
         phone.getInstalledApps().forEach((appName, app) -> {
             panelMain.addAppButton(appName);
             panelMain.getAppButton(appName).addActionListener(new ActionShowDisplayApp(this, app));
@@ -35,11 +45,6 @@ public class PhoneScreen extends JFrame {
                     appPanels.put(appName, new PanelFacebook((Facebook) app));
             }
         });
-
-        btnCloseApp = new JButton("Cerrar App");
-        btnCloseApp.setAlignmentX(Component.CENTER_ALIGNMENT);
-        btnCloseApp.addActionListener(new ActionCloseApp(this));
-        add(btnCloseApp, BorderLayout.PAGE_END);
     }
 
     private void initGUI() {
@@ -50,7 +55,7 @@ public class PhoneScreen extends JFrame {
         addMenuBar();
 
         panelMain = new PanelPrincipal();
-        panelMain.setVisible(true);
+        //panelMain.setVisible(true);
         this.add(panelMain, BorderLayout.CENTER);
     }
 
@@ -66,7 +71,9 @@ public class PhoneScreen extends JFrame {
 
     public void showPanelMain() {
         add(panelMain, BorderLayout.CENTER);
-        panelMain.setVisible(true);
+        actualizarBotonesAppInstalados();
+        revalidate();
+        repaint();
     }
 
     public void hidePanelMain() {
@@ -77,12 +84,16 @@ public class PhoneScreen extends JFrame {
 
     public void showPanelApp(String nameApp) {
         add(appPanels.get(nameApp), BorderLayout.CENTER);
-        appPanels.get(nameApp).setVisible(true);
         panelActual = nameApp;
+        revalidate();
+        repaint();
     }
 
     public void hidePanelApp(String nameApp) {
-        remove(appPanels.get(nameApp));
+        try {
+            remove(appPanels.get(nameApp));
+        }catch (NullPointerException e){  }
+        add(panelMain, BorderLayout.CENTER);
         revalidate();
         repaint();
     }

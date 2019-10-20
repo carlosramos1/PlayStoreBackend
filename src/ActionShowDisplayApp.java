@@ -12,7 +12,8 @@ public class ActionShowDisplayApp implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        phoneScreen.showPanelApp(playStore.getName());
         phoneScreen.hidePanelMain();
+        phoneScreen.showPanelApp(playStore.getName());
+        System.out.println("Abriendo "+playStore.getName());
     }
 }

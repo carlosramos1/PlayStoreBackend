@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PlayStore implements App {
@@ -27,5 +26,9 @@ public class PlayStore implements App {
 
     public boolean appInstalled(String appName) {
         return phone.getInstalledApps().containsKey(appName);
+    }
+
+    public void installApp(String nameApp){
+        phone.installApp(apps.get(nameApp));
     }
 }

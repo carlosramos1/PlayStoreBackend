@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b81bfc69-6df4-4d59-bee0-3390e36c722c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ActionInstalarApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionCloseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionCloseApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionShowDisplayApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionShowDisplayApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PanelPlayStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelPlayStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhoneScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhoneScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlayStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayStore.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +88,7 @@
       <workItem from="1571279765873" duration="3072000" />
       <workItem from="1571345469296" duration="4083000" />
       <workItem from="1571527811154" duration="4908000" />
-      <workItem from="1571540771147" duration="17747000" />
+      <workItem from="1571540771147" duration="22810000" />
     </task>
     <servers />
   </component>
