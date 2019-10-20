@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b81bfc69-6df4-4d59-bee0-3390e36c722c" name="Default Changelist" comment="" />
+    <list default="true" id="b81bfc69-6df4-4d59-bee0-3390e36c722c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Facebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IPanelApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Youtube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionClosePlayStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionClosePlayStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionShowDisplayPlayStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionShowDisplayPlayStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PanelPlayStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelPlayStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PanelPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pantalla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhoneScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayStoreService.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,10 +26,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1SJ5fW7hW7bbzts2ycsL1dYh6L7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="310" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="255" />
@@ -47,8 +66,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Pantalla" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Pantalla" />
+    <configuration name="PhoneScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PhoneScreen" />
       <module name="PlayStoreBackend" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -57,7 +76,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Pantalla" />
+        <item itemvalue="Application.PhoneScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -73,11 +92,26 @@
       <updated>1571268961453</updated>
       <workItem from="1571268968335" duration="7814000" />
       <workItem from="1571279765873" duration="3072000" />
-      <workItem from="1571345469296" duration="3366000" />
+      <workItem from="1571345469296" duration="4083000" />
+      <workItem from="1571527811154" duration="4908000" />
+      <workItem from="1571540771147" duration="10307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

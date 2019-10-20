@@ -1,18 +1,25 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PanelPrincipal extends JPanel {
-    private JButton playStoreButton;
+    private Map<String, JButton> appButtons;
 
     public PanelPrincipal() {
+        appButtons = new HashMap<>();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-
-        playStoreButton = new JButton("PlayStore");
-        playStoreButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        add(playStoreButton);
     }
 
-    public JButton getPlayStoreButton() {
-        return playStoreButton;
+    public void addAppButton(String nameApp){
+        JButton button = new JButton(nameApp);
+        button.setAlignmentX(Component.CENTER_ALIGNMENT);
+        add(button);
+        appButtons.put(nameApp, button);
     }
+
+    public JButton getAppButton(String nameApp){
+        return appButtons.get(nameApp);
+    }
+
 }
