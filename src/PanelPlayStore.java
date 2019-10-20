@@ -12,8 +12,10 @@ public class PanelPlayStore extends JPanel {
             JPanel row = new JPanel();
             row.setLayout(new GridLayout(1,2));
             row.add(new JLabel(appName));
-                JButton botonInstall = new JButton("instalar");
-            row.add(botonInstall);
+            if(playStore.appInstalled(appName))
+                row.add(new JButton("Desinstalar"));
+            else
+                row.add(new JButton("instalar"));
             this.add(row);
         });
 

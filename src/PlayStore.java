@@ -1,11 +1,14 @@
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PlayStore implements App {
     private Map<String, App> apps;
+    private Phone phone;
 
-    public PlayStore() {
+    public PlayStore(Phone phone) {
         apps = new HashMap<>();
+        this.phone = phone;
 
         App youtube = new Youtube();
         apps.put(youtube.getName(), new Youtube());
@@ -20,5 +23,9 @@ public class PlayStore implements App {
     @Override
     public String getName() {
         return "Play Store";
+    }
+
+    public boolean appInstalled(String appName) {
+        return phone.getInstalledApps().containsKey(appName);
     }
 }
