@@ -72,6 +72,7 @@ public class PhoneScreen extends JFrame {
     public void showPanelMain() {
         add(panelMain, BorderLayout.CENTER);
         actualizarBotonesAppInstalados();
+        updateMenuBar(true);
         revalidate();
         repaint();
     }
@@ -85,6 +86,7 @@ public class PhoneScreen extends JFrame {
     public void showPanelApp(String nameApp) {
         add(appPanels.get(nameApp), BorderLayout.CENTER);
         panelActual = nameApp;
+        updateMenuBar(false);
         revalidate();
         repaint();
     }
@@ -102,4 +104,12 @@ public class PhoneScreen extends JFrame {
         return panelActual;
     }
 
+    public void updateMenuBar(boolean isPanelMain){
+        menuItemClose.removeActionListener(menuItemClose.getActionListeners()[0]);
+        if(isPanelMain){
+            menuItemClose.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e){System.exit(0);}});
+        }else{
+            menuItemClose.addActionListener(new ActionCloseApp(this));
+        }
+    }
 }

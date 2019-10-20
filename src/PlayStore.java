@@ -8,7 +8,10 @@ public class PlayStore implements App {
     public PlayStore(Phone phone) {
         apps = new HashMap<>();
         this.phone = phone;
+        appsDisponibles();
+    }
 
+    private void appsDisponibles() {
         App youtube = new Youtube();
         apps.put(youtube.getName(), new Youtube());
         App facebook = new Facebook();
@@ -19,16 +22,16 @@ public class PlayStore implements App {
         return apps;
     }
 
-    @Override
-    public String getName() {
-        return "Play Store";
-    }
-
     public boolean appInstalled(String appName) {
         return phone.getInstalledApps().containsKey(appName);
     }
 
     public void installApp(String nameApp){
         phone.installApp(apps.get(nameApp));
+    }
+
+    @Override
+    public String getName() {
+        return "Play Store";
     }
 }
