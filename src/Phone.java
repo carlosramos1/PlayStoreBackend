@@ -12,6 +12,10 @@ public class Phone {
         installedApps.put(app.getName(), app);
     }
 
+    public void uninstallApp(String nameApp){
+        installedApps.remove(nameApp);
+    }
+
     public Map<String, App> getInstalledApps() {
         return installedApps;
     }

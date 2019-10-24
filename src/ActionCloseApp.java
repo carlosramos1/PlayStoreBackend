@@ -12,6 +12,5 @@ public class ActionCloseApp implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         phoneScreen.hidePanelApp(phoneScreen.getPanelActual());
         phoneScreen.showPanelMain();
-        System.out.println("cerrando "+phoneScreen.getPanelActual());
     }
 }

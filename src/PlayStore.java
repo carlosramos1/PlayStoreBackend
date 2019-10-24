@@ -30,6 +30,10 @@ public class PlayStore implements App {
         phone.installApp(apps.get(nameApp));
     }
 
+    public void uninstallApp(String nameApp){
+        phone.uninstallApp(nameApp);
+    }
+
     @Override
     public String getName() {
         return "Play Store";
